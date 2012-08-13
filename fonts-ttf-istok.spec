@@ -2,13 +2,12 @@
 
 Summary:	Sans serif typeface
 Name:		fonts-ttf-istok
-Version:	0.4.2
+Version:	1.0
 Release:	%mkrel 1
 License:	GPLv3 with font exception
 Group:		System/Fonts/True type
 URL:		http://code.google.com/p/istok/
 Source0:	http://istok.googlecode.com/files/%{pkgname}-%{version}.tar.xz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 BuildRequires:	freetype-tools
 
@@ -24,8 +23,6 @@ instructions are specifically intended for rendering on LCD displays.
 %build
 
 %install
-%__rm -rf %{buildroot}
-
 %__mkdir_p %{buildroot}%{_xfontdir}/TTF/istok
 
 %__install -m 644 *.ttf %{buildroot}%{_xfontdir}/TTF/istok
@@ -36,11 +33,8 @@ ttmkfdir %{buildroot}%{_xfontdir}/TTF/istok -o %{buildroot}%{_xfontdir}/TTF/isto
 %__ln_s ../../..%{_xfontdir}/TTF/istok \
     %{buildroot}%_sysconfdir/X11/fontpath.d/ttf-istok:pri=50
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
+%defattr(644,root,root,755)
 %doc README COPYING ChangeLog AUTHORS TODO
 %dir %{_xfontdir}/TTF/istok
 %{_xfontdir}/TTF/istok/*.ttf
