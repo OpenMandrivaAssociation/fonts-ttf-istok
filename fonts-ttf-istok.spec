@@ -3,7 +3,7 @@
 Summary:	Sans serif typeface
 Name:		fonts-ttf-istok
 Version:	1.0
-Release:	%mkrel 1
+Release:	2
 License:	GPLv3 with font exception
 Group:		System/Fonts/True type
 URL:		http://code.google.com/p/istok/
