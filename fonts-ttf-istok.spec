@@ -6,7 +6,7 @@ Version:	1.0
 Release:	2
 License:	GPLv3 with font exception
 Group:		System/Fonts/True type
-URL:		http://code.google.com/p/istok/
+URL:		https://code.google.com/p/istok/
 Source0:	http://istok.googlecode.com/files/%{pkgname}-%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	freetype-tools
